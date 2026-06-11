@@ -1,0 +1,10 @@
+
+.highlight-section {
+  animation: flash 1.5s ease;
+}
+
+@keyframes flash {
+  0%   { background-color: #fff3cd; }
+  50%  { background-color: #ffe69c; }
+  100% { background-color: transparent; }
+}

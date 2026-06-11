@@ -1,0 +1,11 @@
+.hover-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent !important; /* important fix */
+}
+
+.hover-card:hover {
+  border: 2px solid gray !important;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.25);
+}

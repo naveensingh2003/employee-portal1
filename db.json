@@ -1,0 +1,16 @@
+{
+  "admins": [
+    {
+      "admin_id": "john@11",
+      "password": "john@11",
+      "id": "1kE8i-WnkDM"
+    }
+       ,
+    {
+      "admin_id": "naveen@11",
+      "password": "naveen@11"
+      
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
