@@ -1,16 +1,51 @@
-# React + Vite
+# Employee Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack application with a Spring Boot backend and React (Vite) frontend organized in a unified repository.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📁 Repository Structure
 
-## React Compiler
+```text
+employee-portal1/
+│
+├── emp-web/                   # Frontend (React 19, Vite, Bootstrap, Axios)
+│   ├── src/                   # React components & UI logic
+│   ├── public/                # Static assets
+│   ├── package.json           # Frontend dependencies & scripts
+│   └── vite.config.js
+│
+├── emp-api/                   # Backend (Spring Boot, Java 21, Gradle)
+│   ├── src/main/java/         # Controllers, Services, Repositories, Entities
+│   ├── src/main/resources/    # application.properties
+│   ├── build.gradle           # Gradle dependencies
+│   └── gradlew.bat
+│
+└── start-dev.ps1              # One-click launcher script for both services
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Running the Project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Option A: One-Click Launch (PowerShell)
+Run the PowerShell helper script from the root:
+```powershell
+.\start-dev.ps1
+```
+
+### Option B: Running Manually
+
+#### 1. Backend (Spring Boot)
+```bash
+cd emp-api
+./gradlew.bat bootRun
+```
+Backend runs by default at `http://localhost:9898` (or configured port in `application.properties`).
+
+#### 2. Frontend (React + Vite)
+```bash
+cd emp-web
+npm run dev
+```
+Frontend runs by default at `http://localhost:5173`.
